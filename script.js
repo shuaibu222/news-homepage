@@ -1,12 +1,16 @@
-const hamburger = document.getElementById("btnHamburger");
-console.log(hamburger);
+const body = document.querySelector("body");
+const hamburger = document.querySelector("#btnHamburger");
 const header = document.querySelector(".header");
-console.log(header);
+const sidebar = document.querySelector("#mySidenav");
+const closeSidebar = document.querySelector("#closeSidebar");
 
 hamburger.addEventListener("click", function () {
-  if (header.classList.contains("open")) {
-    header.classList.remove("open");
-  } else {
-    header.classList.add("open");
-  }
+  sidebar.style.width = "270px";
+  body.style.backgroundColor = "hsl(233, 5%, 63%)";
+  body.style.overflow = "hidden";
+});
+
+closeSidebar.addEventListener("click", function () {
+  sidebar.style.width = "0px";
+  body.style.backgroundColor = "hsl(36, 100%, 99%)";
 });

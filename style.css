@@ -80,6 +80,12 @@ body {
   background: var(--Off-white);
 }
 
+@media (min-width: 90em) {
+  body {
+    max-width: 85vw;
+  }
+}
+
 p {
   font-size: var(--paragraph-size);
   color: var(--Grayish-blue);
@@ -131,18 +137,6 @@ a:not(.icon) {
   margin-bottom: 5px;
 }
 
-/* the animation when opening hamburger menu */
-
-.open span:first-child {
-  transform: rotate(45deg);
-}
-.open span:nth-child(2) {
-  opacity: 0;
-}
-.open span:last-child {
-  transform: rotate(-45deg);
-}
-
 /* nav items starts here */
 
 .nav ul {
@@ -170,15 +164,15 @@ ul li a:hover {
 
 .sidenav {
   height: 100%;
-  width: 270px;
+  width: 0;
   position: fixed;
   z-index: 10;
   top: 0;
   right: 0;
   background: var(--Off-white);
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   transition: all 300ms ease-in-out;
-  padding-top: 7rem;
+  padding-top: 6rem;
 }
 
 .sidenav a {
@@ -193,12 +187,27 @@ ul li a:hover {
   color: var(--soft-red);
 }
 
-.sidenav .closebtn {
+.sidenav .closebtn span {
   position: absolute;
-  top: 0;
-  left: 1.5625rem;
-  font-size: 3.5rem;
+  top: 2.7rem;
+  left: 4rem;
   margin-left: 10rem;
+  height: 2px;
+  width: 34px;
+  display: block;
+  background: black;
+  transition: all 300ms ease-in-out;
+  transform-origin: 17px 1px;
+}
+
+.sidenav span:first-child {
+  transform: rotate(45deg);
+}
+.sidenav span:nth-child(2) {
+  opacity: 0;
+}
+.sidenav span:last-child {
+  transform: rotate(-45deg);
 }
 
 /* nav items ends here */
@@ -216,7 +225,13 @@ SPECIAL STYLES
 /* hide and display of nav-icon on mobile and desktop */
 
 @media (min-width: 43.75em) {
+  body {
+    background: var(--Off-white) !important;
+  }
   .hide-for-desktop {
+    display: none;
+  }
+  .sidenav {
     display: none;
   }
 }
@@ -225,14 +240,4 @@ SPECIAL STYLES
   .hide-for-mobile {
     display: none;
   }
-}
-
-.overlay {
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: var(--Dark-grayish-blue);
 }
