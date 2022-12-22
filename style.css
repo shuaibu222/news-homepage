@@ -82,6 +82,7 @@ body {
   word-spacing: 1.3px;
   letter-spacing: 0.3px;
   line-height: 1.7;
+  transition: background-color 300ms;
 }
 
 @media (min-width: 90em) {
