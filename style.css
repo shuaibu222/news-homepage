@@ -1,16 +1,19 @@
 /* FONT FAMILY LOCALLY */
 @font-face {
   font-family: Inter;
+  font-weight: 400;
   src: url("/assets/fonts/static/Inter-Regular.ttf");
   font-display: swap;
 }
 @font-face {
   font-family: Inter;
+  font-weight: 700;
   src: url("/assets/fonts/static/Inter-Bold.ttf");
   font-display: swap;
 }
 @font-face {
   font-family: Inter;
+  font-weight: 800;
   src: url("/assets/fonts/static/Inter-ExtraBold.ttf");
   font-display: swap;
 }
